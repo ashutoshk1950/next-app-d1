@@ -14,10 +14,10 @@ const Navbar = () => {
           src="/assets/images/site-logo.svg"
           width={23}
           height={23}
-          alt="DevFlow"
+          alt="TestIt"
         />
         <p className="h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 max-sm:hidden">
-          Dev <span className="text-primary-500"> Flow</span>
+          Test <span className="text-primary-500"> it</span>
         </p>
       </Link>
       <GlobalSearch />
@@ -31,7 +31,7 @@ const Navbar = () => {
                 avatarBox: "h-10 w-10",
               },
               variables: {
-                colorPrimary: "#ff7000",
+                colorPrimary: "#3ddc84",
               },
             }}
           />
