@@ -17,7 +17,9 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 
 const Answer = () => {
+  // eslint-disable-next-line no-unused-vars
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const { mode } = useTheme();
   const editorRef = useRef(null);
   const form = useForm<z.infer<typeof AnswerSchema>>({

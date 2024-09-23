@@ -2,14 +2,17 @@ import Answer from "@/components/forms/Answer";
 import Metric from "@/components/shared/Metric";
 import ParseHTML from "@/components/shared/ParseHTML";
 import RenderTag from "@/components/shared/RenderTag";
-import Tag from "@/database/tag.model";
 import { getQuestionById } from "@/lib/actions/question.action";
 import { formatNumber, getTimestamp } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Page = async ({ params, searchParams }) => {
+interface Params {
+  id: string;
+}
+
+const Page = async ({ params }: { params: Params }) => {
   const result = await getQuestionById({ questionId: params.id });
 
   return (
