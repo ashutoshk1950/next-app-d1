@@ -35,3 +35,10 @@ export const formatNumber = (num: number): string => {
     return `${num}`; // Return the number as-is if it's below 1,000
   }
 };
+
+export const getJoinedDate = (date: Date): string => {
+  const month = date.toLocaleString("default", { month: "long" }); // Get the full month name
+  const year = date.getFullYear(); // Get the year
+
+  return `${month} ${year}`; // Join month and year
+};
