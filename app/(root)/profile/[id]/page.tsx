@@ -53,7 +53,7 @@ const Page = async ({ params, searchParams }: URLProps) => {
               )}
               <ProfileLink
                 imgUrl="/assets/icons/calendar.svg"
-                title={getJoinedDate(userInfo.user.joinAt)}
+                title={`Joined on ${getJoinedDate(userInfo.user.joinAt)}`}
               />
             </div>
             {userInfo.user.bio && (
@@ -96,7 +96,7 @@ const Page = async ({ params, searchParams }: URLProps) => {
               clerkId={clerkId}
             />
           </TabsContent>
-          <TabsContent value="answers">
+          <TabsContent value="answers" className="flex w-full flex-col gap-6">
             <AnswersTab
               searchParams={searchParams}
               userId={userInfo.user._id}

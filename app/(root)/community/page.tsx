@@ -4,10 +4,14 @@ import LocalSerachbar from "@/components/shared/search/LocalSerachbar";
 
 import { UserFilters } from "@/constants/filters";
 import { getAllUsers } from "@/lib/actions/user.action";
+import { SearchParamsProps } from "@/types";
 import Link from "next/link";
 
-const page = async () => {
-  const results = await getAllUsers({});
+const page = async ({ searchParams }: SearchParamsProps) => {
+  const results = await getAllUsers({
+    searchQuery: searchParams.q,
+    filter: searchParams.filter,
+  });
 
   return (
     <>
